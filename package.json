@@ -1,0 +1,21 @@
+{
+  "name": "noop",
+  "version": "0.0.0",
+  "description": "Helping create an Object Orientated environment for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R list test"
+  },
+  "repository": "",
+  "keywords": [
+    "oo",
+    "oop"
+  ],
+  "author": "John Wright <johngeorge.wright@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*",
+    "sinon": "*"
+  }
+}
