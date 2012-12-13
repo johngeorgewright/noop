@@ -1,6 +1,6 @@
 expect = require 'expect.js'
 assert = require 'assert'
-sinon  = require 'assert'
+sinon  = require 'sinon'
 Base   = require '../lib/Base'
 
 describe 'Base', ->
@@ -53,7 +53,7 @@ describe 'Base', ->
 
     it 'will call the #super_\'s method when a string is passed', ->
       @obj.super 'spy'
-      asset @spy.calledWith()
+      assert @spy.calledWith()
       @obj.super 'spy', 'test', 'parameters'
       assert @spy.calledWith 'test', 'parameters'
 
