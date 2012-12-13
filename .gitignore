@@ -1,3 +1,4 @@
-node_modules
-*.swp
-.c9revisions
+*
+!src
+!test
+!package.json
