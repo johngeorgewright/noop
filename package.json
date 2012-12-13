@@ -4,7 +4,8 @@
   "description": "Helping create an Object Orientated environment for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R list test"
+    "test": "mocha -R list --compilers coffee:coffee-script test",
+    "postinstall": "coffee -c -b -o . src"
   },
   "repository": "",
   "keywords": [
@@ -13,9 +14,13 @@
   ],
   "author": "John Wright <johngeorge.wright@gmail.com>",
   "license": "BSD",
+  "dependencies": {
+    "underscore": "*"
+  },
   "devDependencies": {
     "mocha": "*",
     "expect.js": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "coffee-script": "*"
   }
 }

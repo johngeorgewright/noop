@@ -41,7 +41,7 @@ describe('Base', function(){
   describe('#super()', function(){
 
     beforeEach(function(){
-      Base.prototype.spy = sinon.spy();
+      this.spy = Base.prototype.spy = sinon.spy();
 
       function Fn(){};
       function Fn2(){};
@@ -66,16 +66,16 @@ describe('Base', function(){
 
     it('will call the ##super_\'s method when a string is passed', function(){
       this.obj.super('spy');
-      assert(Base.prototype.spy.calledWith());
+      assert(this.spy.calledWith());
       this.obj.super('spy', 'test', 'parameters');
-      assert(Base.prototype.spy.calledWith('test', 'parameters'));
+      assert(this.spy.calledWith('test', 'parameters'));
     });
 
     it('can be used in the parent as well', function(){
       this.obj2.super('spy2');
-      assert(Base.prototype.spy.calledWith());
+      assert(this.spy.calledWith());
       this.obj2.super('spy2', 'test', 'parameters');
-      assert(Base.prototype.spy.calledWith('test', 'parameters'));
+      assert(this.spy.calledWith('test', 'parameters'));
     });
 
   });
